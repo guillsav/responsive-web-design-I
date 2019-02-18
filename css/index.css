@@ -272,6 +272,7 @@ header nav a {
 @media (max-width: 950px) {
   header nav a {
     margin-right: 0;
+    color: #3c3c3c;
   }
 }
 
@@ -372,6 +373,7 @@ header .logo {
   width: 200px;
   height: 42px;
   padding: 0;
+  transition: background 0.3s, color 0.3s;
 }
 @media (min-width: 960px) {
   .call-to-action .get-started:hover {
@@ -381,8 +383,9 @@ header .logo {
 }
 @media (max-width: 950px) {
   .call-to-action .get-started {
-    background: black;
-    color: white;
+    background: none;
+    border: 1px solid black;
+    color: black;
   }
 }
 
@@ -607,6 +610,7 @@ address {
   padding: 0;
   margin: 20px 0;
   cursor: pointer;
+  transition: background 0.3s, color 0.3s;
 }
 
 @media (max-width: 950px) {
