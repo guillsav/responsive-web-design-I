@@ -3,6 +3,10 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
 html,
 body,
@@ -137,7 +141,8 @@ table {
 html,
 body {
   height: 100%;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color: #5e5e5e;
 }
 
 h1,
@@ -145,122 +150,274 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Bangers', cursive;
+  font-family: 'Pacifico', cursive;
   letter-spacing: 1px;
   margin-bottom: 15px;
+  font-size: 24px;
+  color: black;
 }
 
-/* Your code starts here! */
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
-#container {
-  width: 960px;
+.container {
+  max-width: 960px;
   margin: auto;
   padding-top: 20px;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+@media (max-width: 950px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+/* Utility */
+
+/* Button */
+.btn-learn-more {
+  background: #eaeaea;
+  border: none;
+  width: 60%;
+  height: 32px;
+  border-radius: 5px;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background: #fff;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* line-height */
+.t-l-h-regular {
+  line-height: 1.5;
+}
+
+.t-l-h-contained {
+  line-height: 1.35;
 }
 
 /* Header section */
 header {
-  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 50px;
-  justify-content: center;
+}
+
+@media (max-width: 950px) {
+  header {
+    flex-direction: column-reverse;
+  }
 }
 
 header nav {
-  display: inline-block;
-  /* width: 700px; */
+  display: flex;
+  justify-content: flex-start;
+  width: 450px;
+}
+
+@media (max-width: 950px) {
+  header nav {
+    width: 90%;
+    justify-content: space-between;
+  }
 }
 
 header nav a {
+  font-weight: 500;
   text-decoration: none;
   color: rgb(155, 155, 155);
-  padding: 0 30px;
+  margin-right: 50px;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+@media (max-width: 950px) {
+  header nav a {
+    margin-right: 0;
+  }
+}
+/* Hover state Desktop only */
+@media (min-width: 960px) {
+  header nav a:hover {
+    color: black;
+    font-weight: 500;
+  }
 }
 
 header .logo {
-  display: inline-block;
-  vertical-align: middle;
-  padding-left: 70px;
+  width: 253px;
 }
 
+@media (max-width: 950px) {
+  header .logo {
+    margin-bottom: 50px;
+  }
+}
 /* top-content section */
 .top-content {
-  vertical-align: super;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-bottom: 20px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
 }
 
-.call-to-action {
-  display: inline-block;
+@media (max-width: 950px) {
+  .top-content {
+    justify-content: center;
+  }
+}
+
+.top-content .call-to-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 290px;
-  text-align: center;
   margin: 65px;
-  vertical-align: middle;
+}
+
+@media (max-width: 950px) {
+  .top-content .call-to-action {
+    margin-top: 0;
+  }
 }
 
 .call-to-action h1 {
-  font-size: 60px;
+  width: 220px;
+  font-family: 'Pacifico', cursive;
+  font-size: 52px;
+  text-align: center;
   letter-spacing: 2px;
-  margin: 20px;
+  line-height: 1.2;
+  margin-bottom: 30px;
 }
 .call-to-action .get-started {
-  background: white;
-  border: 1px solid #616161;
+  background: #eaeaea;
+  border: none;
+  color: rgb(0, 0, 0, 0.8);
+  border-radius: 5px;
   font-size: 18px;
-  width: 70%;
-  height: 38px;
+  width: 200px;
+  height: 42px;
+  padding: 0;
+}
+@media (min-width: 960px) {
+  .call-to-action .get-started:hover {
+    color: #fff;
+    background: black;
+  }
+}
+@media (max-width: 950px) {
+  .call-to-action .get-started {
+    background: black;
+    color: white;
+  }
 }
 
 .hero-img {
-  display: inline-block;
   margin-bottom: 30px;
-  padding-left: 125px;
-  vertical-align: middle;
+  /* padding-left: 165px; */
+}
+
+@media (max-width: 950px) {
+  .hero-img {
+    display: none;
+  }
 }
 
 /* Main-content section */
 .main-content {
-  border-bottom: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
   margin-bottom: 30px;
 }
 
+.main-content h2 {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+}
+
 .features {
-  display: inline-block;
   width: 48%;
   padding: 30px 0;
+}
+
+@media (max-width: 950px) {
+  .features {
+    width: 46%;
+  }
 }
 
 .middle-img {
-  display: block;
   width: 100%;
+  border-radius: 5px;
 }
 
 .about {
-  display: inline-block;
   width: 48%;
   padding: 30px 0;
 }
 
+@media (max-width: 950px) {
+  .about {
+    width: 46%;
+  }
+}
+
 .services {
-  display: inline-block;
-  width: 33%;
-  padding: 30px 0;
+  width: 31%;
+  padding: 30px 0px;
+}
+
+@media (max-width: 950px) {
+  .services {
+    width: 30%;
+  }
 }
 
 .product {
-  display: inline-block;
-  width: 33%;
-  padding: 30px 0;
+  width: 31%;
+  padding: 30px 0px;
+}
+
+@media (max-width: 950px) {
+  .product {
+    width: 30%;
+  }
 }
 
 .vision {
-  display: inline-block;
-  width: 33%;
+  width: 31%;
   padding: 30px 0;
+}
+
+@media (max-width: 950px) {
+  .vision {
+    width: 30%;
+  }
 }
 
 /* Contact section */
 .contact {
   margin-bottom: 20px;
+}
+
+.contact h2 {
+  font-family: 'Lora', serif;
+  font-weight: 700;
 }
 
 address {
@@ -269,6 +426,166 @@ address {
 
 .phone {
   margin: 20px 0;
+}
+
+/* --- Services Page --- */
+
+/* Description section */
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.description .services-header-img {
+  border-radius: 5px;
+  height: 200px;
+}
+
+.description h1 {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* Services-list section */
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.services-list .box {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  padding: 20px 20px 0 20px;
+  background: #fff;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+
+.box p {
+  width: 395px;
+}
+
+.box .btn-learn-more {
+  background: #eaeaea;
+  border: none;
+  width: 28%;
+  height: 32px;
+  border-radius: 5px;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.box .btn-learn-more:hover {
+  border-radius: 5px;
+}
+
+.box h2 {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* bottom-content section */
+.bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.bottom-content .some-facts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45%;
+}
+
+.some-facts ul li {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.some-facts ul li::before {
+  content: '\2012';
+  color: #c7c7c7;
+  font-weight: bold;
+  display: inline-block;
+  width: 24px;
+}
+
+.bottom-content .right {
+  width: 460.8px;
+}
+
+.bottom-content .right img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* About Us Page  */
+.meet-us {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.meet-us .smilley {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.meet-the-team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+}
+
+.meet-the-team .card {
+  width: 22%;
+  margin-bottom: 40px;
+}
+
+.meet-the-team .card img {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 4px 4px 0 0;
+}
+
+.meet-the-team .card h2 {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+.meet-the-team .card h3 {
+  padding: 0 20px;
+  font-size: 13px;
+  line-height: 1.25;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #9a9a9a;
+}
+
+.meet-the-team .card p {
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.meet-the-team .card button {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 /* Footer section */
