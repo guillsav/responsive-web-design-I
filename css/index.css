@@ -626,6 +626,8 @@ address {
 
 .box .btn-learn-more:hover {
   border-radius: 5px;
+  color: white;
+  background: black;
 }
 
 .box h2 {
