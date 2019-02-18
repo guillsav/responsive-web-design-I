@@ -343,7 +343,7 @@ header .logo {
 
 @media (max-width: 950px) {
   .top-content .call-to-action {
-    margin-top: 0;
+    margin-top: 10px;
   }
 }
 
