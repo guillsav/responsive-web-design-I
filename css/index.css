@@ -542,7 +542,7 @@ address {
 
 .description .services-header-img {
   border-radius: 5px;
-  height: 200px;
+  height: auto;
 }
 
 .description h1 {
@@ -572,7 +572,7 @@ address {
 }
 
 .box p {
-  width: 395px;
+  width: 98%;
 }
 
 .box .btn-learn-more {
@@ -583,6 +583,13 @@ address {
   border-radius: 5px;
   padding: 0;
   margin: 20px 0;
+}
+
+@media (max-width: 950px) {
+  .box .btn-learn-more {
+    width: 50%;
+    height: 32px;
+  }
 }
 
 .box .btn-learn-more:hover {
@@ -599,8 +606,13 @@ address {
 .bottom-content {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   margin-bottom: 40px;
+}
+
+@media (max-width: 950px) {
+  .bottom-content {
+    padding: 0 1%;
+  }
 }
 
 .bottom-content .some-facts {
@@ -627,8 +639,16 @@ address {
   width: 460.8px;
 }
 
+@media (max-width: 950px) {
+  .bottom-content .right {
+    width: 48%;
+    margin: 0;
+  }
+}
+
 .bottom-content .right img {
   width: 100%;
+  height: auto;
   border-radius: 5px;
 }
 
