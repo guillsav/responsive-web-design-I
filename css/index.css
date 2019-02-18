@@ -179,7 +179,7 @@ img {
   }
 }
 
-@media (max-width: 715px) {
+@media (max-width: 650px) {
   .container {
     padding-left: 0;
     padding-right: 0;
@@ -231,7 +231,7 @@ header {
   }
 }
 
-@media (max-width: 715px) {
+@media (max-width: 650px) {
   header {
     margin-bottom: 40px;
   }
@@ -250,7 +250,7 @@ header nav {
   }
 }
 
-@media (max-width: 715px) {
+@media (max-width: 650px) {
   header nav {
     flex-direction: column;
     align-items: center;
@@ -275,7 +275,7 @@ header nav a {
   }
 }
 
-@media (max-width: 715px) {
+@media (max-width: 650px) {
   header nav a {
     height: 60px;
     border-bottom: 1px solid rgb(0, 0, 0, 0.1);
@@ -304,7 +304,7 @@ header .logo {
   }
 }
 
-@media (max-width: 715px) {
+@media (max-width: 650px) {
   header .logo {
     width: 40%;
     margin-bottom: 30px;
@@ -326,7 +326,7 @@ header .logo {
   }
 }
 
-@media (max-width: 715px) {
+@media (max-width: 650px) {
   .top-content {
     margin: 0 3%;
   }
@@ -344,6 +344,12 @@ header .logo {
 @media (max-width: 950px) {
   .top-content .call-to-action {
     margin-top: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .top-content .call-to-action {
+    margin-bottom: 30px;
   }
 }
 
@@ -399,7 +405,7 @@ header .logo {
   margin-bottom: 30px;
 }
 
-@media (max-width: 715px) {
+@media (max-width: 650px) {
   .main-content {
     margin: 0 3%;
   }
@@ -421,7 +427,7 @@ header .logo {
   }
 }
 
-@media (max-width: 715px) {
+@media (max-width: 650px) {
   .features {
     width: 98%;
     padding-bottom: 20px;
@@ -439,7 +445,7 @@ header .logo {
   }
 }
 
-@media (max-width: 715px) {
+@media (max-width: 650px) {
   .about {
     width: 98%;
     padding-bottom: 40px;
@@ -462,7 +468,7 @@ header .logo {
   }
 }
 
-@media (max-width: 715px) {
+@media (max-width: 650px) {
   .services {
     width: 98%;
   }
@@ -479,7 +485,7 @@ header .logo {
   }
 }
 
-@media (max-width: 715px) {
+@media (max-width: 650px) {
   .product {
     width: 98%;
   }
@@ -496,7 +502,7 @@ header .logo {
   }
 }
 
-@media (max-width: 715px) {
+@media (max-width: 650px) {
   .vision {
     width: 98%;
   }
