@@ -306,7 +306,7 @@ header .logo {
 
 @media (max-width: 650px) {
   header .logo {
-    width: 40%;
+    width: 48%;
     margin-bottom: 30px;
   }
 }
