@@ -462,8 +462,12 @@ header .logo {
   }
 }
 
-.middle-img {
+.main-content .middle-content {
   width: 100%;
+  height: auto;
+}
+
+.middle-img {
   border-radius: 5px;
 }
 
