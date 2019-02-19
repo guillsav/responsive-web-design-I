@@ -308,7 +308,6 @@ header .logo {
 @media (max-width: 650px) {
   header .logo {
     width: 100%;
-
     margin-bottom: 30px;
   }
 }
@@ -373,6 +372,7 @@ header .logo {
   width: 200px;
   height: 42px;
   padding: 0;
+  cursor: pointer;
   transition: background 0.3s, color 0.3s;
 }
 @media (min-width: 960px) {
