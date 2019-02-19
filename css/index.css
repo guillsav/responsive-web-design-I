@@ -381,6 +381,7 @@ header .logo {
     background: black;
   }
 }
+
 @media (max-width: 950px) {
   .call-to-action .get-started {
     background: none;
@@ -389,9 +390,14 @@ header .logo {
   }
 }
 
+@media (max-width: 650px) {
+  .call-to-action .get-started {
+    width: 100%;
+  }
+}
+
 .hero-img {
   margin-bottom: 30px;
-  /* padding-left: 165px; */
 }
 
 @media (max-width: 950px) {
